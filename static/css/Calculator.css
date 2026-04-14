@@ -1,0 +1,62 @@
+.Calculator {
+  position: relative;
+  padding: 20px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  color: black;
+  font-size: 20pt;
+  font-family: sans-serif;
+  margin-left: 5px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  border-radius: 22px 30px 22px 30px;
+  box-shadow: inset -10px -10px 1px 1px rgba(100, 100, 100, 1);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.Calculator-display,
+.Calculator-upperDisplay {
+  font-family: monospace;
+  background: whiteSmoke;
+  color: #333;
+  border: 4px inset gray;
+  text-align: right;
+  font-size: 32pt;
+  grid-column: 1 / span 2;
+}
+
+.Calculator-upperDisplay {
+  background: none;
+  border: none;
+}
+
+
+
+.Calculator-extraOperations {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.Calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.Calculator-operations {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.Calculator-currentOperation {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}

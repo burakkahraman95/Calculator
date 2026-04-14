@@ -1,0 +1,24 @@
+.Receipt {
+    display: block;
+    grid-column: 2;
+    grid-row: 3;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1;
+    font-family: monospace;
+    border-radius: 1px;
+    margin-top: 20px;
+    border-top: 10px solid black;
+    text-align: right;
+    background: url('../img/lined_paper.png');
+}
+
+.Receipt--error {
+    background: url('../img/connectwork.webp');
+    grid-row: 1;
+    color: red;
+    font-weight: bolder;
+    min-height: 30px;
+    border-radius: 30px;
+    text-align: left;
+}

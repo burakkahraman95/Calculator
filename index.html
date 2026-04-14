@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./static/css/App.css" />
+    <link rel="stylesheet" href="./static/css/Button.css" />
+    <link rel="stylesheet" href="./static/css/Calculator.css" />
+    <link rel="stylesheet" href="./static/css/Receipt.css" />
+    <script defer src="./static/js/utils.js"></script>
+    <script defer src="./static/js/main.js"></script>
+</head>
+<body>
+    <div class="App" id="app">
+        <div class="Receipt Receipt--error" id="error">&nbsp;</div>
+        <div class="Calculator">
+            <div class="Calculator-upperDisplay">JavaScript Calc</div>
+            <div class="Calculator-display" id="display">&nbsp;</div>
+            <div class="Calculator-extraOperations">
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('**2', 'x²')">x²</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('**3', 'x³')">x³</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('*0.01', '%')">%</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('*0.0001', '‰')">‰</button>
+            </div>
+            <div class="Calculator-extraOperations">
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('/', '÷')">÷</button>
+              <button class="Button Button--yellow" onclick="typeSpecialSymbol('*', '×')">×</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('-')">-</button>
+              <button class="Button Button--yellow" onclick="typeSymbol('+')">+</button>
+            </div>
+            <div class="Calculator-keypad">
+              <button class="Button" onclick="typeSymbol('9')">9</button>
+              <button class="Button" onclick="typeSymbol('8')">8</button>
+              <button class="Button" onclick="typeSymbol('7')">7</button>
+              <button class="Button" onclick="typeSymbol('6')">6</button>
+              <button class="Button" onclick="typeSymbol('5')">5</button>
+              <button class="Button" onclick="typeSymbol('4')">4</button>
+              <button class="Button" onclick="typeSymbol('3')">3</button>
+              <button class="Button" onclick="typeSymbol('2')">2</button>
+              <button class="Button" onclick="typeSymbol('1')">1</button>
+              <button class="Button" onclick="typeSymbol('0')">0</button>
+              <button class="Button" onclick="typeSymbol('.')">.</button>
+              <button class="Button Button--red" onclick="showResult()">RSLT</button>
+            </div>
+            <div class="Calculator-operations">
+              <button class="Button Button--red" onclick="backspace()">⌫</button>
+              <button class="Button Button--red" onclick="clearExpression()">CLR</button>
+              <button class="Button Button--green" style="grid-row: 3 / span 2; height: 139px; font-size: 50px" onclick="execute()">⏎ </button>
+            </div>
+        </div>
+        <div class="Receipt" id="receipt_contents">
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background: url('../img/bg.png');
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 450px) 1fr;
+  grid-template-rows: 1fr minmax(auto, 600px) auto;
+}
+
+.App .Calculator {
+  grid-column: 2; 
+  grid-row: 2;
+}
+
